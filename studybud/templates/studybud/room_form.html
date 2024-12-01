@@ -1,0 +1,17 @@
+{% extends 'main.html'%}
+
+{%  block content %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}   
+        {{form.as_p}}
+        <!-- The CSRF (Cross-Site Request Forgery) token is used to protect the web application from CSRF attacks -->
+            
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+
+
+
+{% endblock content %}
